@@ -1,5 +1,9 @@
 # PaaS not required?
 
+!!! overview
+    - Start from your requirements, wants, and needs, not somebody else's.
+    - Preserve the ability to migrate as you find better matches for your needs.
+
 Time to address the elephant in the room: why is an employee of a PaaS company writing a book on Kamal?
 
 - I was a book author before I was a Fly.io employee. A book on Rails 8 would be incomplete without covering Kamal.
@@ -9,19 +13,16 @@ Time to address the elephant in the room: why is an employee of a PaaS company w
 
 Had Kamal 2.0 existed before I joined Fly.io, I probably would have gone with that, which in the long run would have been a loss, as I've learned so much.
 
-And I certainly agree that Kamal was the right bet for 37signals.
-[The Big Cloud Exit FAQ](https://world.hey.com/dhh/the-big-cloud-exit-faq-20274010)
+And I certainly agree that Kamal was the [right bet]((https://world.hey.com/dhh/the-big-cloud-exit-faq-20274010)) for 37signals.
 
-I encourage everybody to watch David Heinemeier Hansson's Rails World 2024 Opening Keynote.
-[Watch the keynote](https://www.youtube.com/watch?v=-cEn_83zRFw)
+I encourage everybody to watch David Heinemeier Hansson's
+[Rails World 2024 Opening Keynote](https://www.youtube.com/watch?v=-cEn_83zRFw).
 Some of the points DHH makes do not apply to Fly.io; other parts I disagree with, but come to your own conclusion.
 
 But I will post a few topics for you to ponder:
 
 - If your application is only running for 60 hours a week, why pay for 168?
-- Part of Rails' core strength is Convention over Configuration and the Menu is Omakase, as is No One Paradigm and Provide Sharp Knives.
-  [Rails Doctrine](https://rubyonrails.org/doctrine)
-  When evaluated against these criteria, Kamal and PaaS providers come on strong in some areas and weaker in others.
+- Review the [Rails Doctrine](https://rubyonrails.org/doctrine). Part of Rails' core strength is Convention over Configuration and the Menu is Omakase, as is No One Paradigm and Provide Sharp Knives. When evaluated against these criteria, Kamal and PaaS providers come on strong in some areas and weaker in others.
 - Is managing host availability and security part of your core business, or would you rather leave that to others?
 
 Ultimately, the decision as to what is right for you can only be made by you.

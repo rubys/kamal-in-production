@@ -4,16 +4,14 @@ See [book](https://rubys.github.io/kamal-in-production/) live on GitHub Pages.
 
 # Development
 
-Use:
+To view the pages locally:
 
 ```sh
 mkdocs serve
 ```
 
-To view the pages locally, and
+To deploy to GitHub Pages:
 
 ```sh
 mkdocs gh-deploy
 ```
-
-To deploy to GitHub.

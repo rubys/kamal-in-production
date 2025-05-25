@@ -1,5 +1,10 @@
 # Recap
 
+!!! overview
+    - Deploy locally first
+    - Plan, configure, then run `kamal setup`
+    - Ensure that your database is backed up, that your logs are searchable, that your application is being monitored, and that your application is secure.
+
 This is a small book, but it covered a lot of ground, and quickly.
 
 - First, we stressed the importance of deploying locally first. It is hard enough debugging why your application can't start in an unfamiliar environment; it is doubly as hard if you've never deployed your application at all.
