@@ -2,7 +2,7 @@
 
 by Sam Ruby
 
-!!! Tip
+!!! tip
     * Click `n` to proceed to the next page
     * Click `p` to return to the previous page
 

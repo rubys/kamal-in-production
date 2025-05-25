@@ -8,12 +8,12 @@ You can skip forward to the next chapter: Staging.
 
 [Thruster](https://github.com/basecamp/thruster?tab=readme-ov-file#thruster) provides a number of optimizations for your application:
 
-- **HTTP/2 support:** This is a major improvement over HTTP/1.1, and is supported by all modern browsers. It is a binary protocol with header compression, and is multiplexed, meaning that multiple requests can be sent at the same time.
-- **Basic HTTP caching:** Requests for documents found in your `public` directory will be satisfied by the cache, and not hit your application.
+- **HTTP/2 support:** This is a major improvement over HTTP/1.1 and is supported by all modern browsers. It is a binary protocol with header compression and is multiplexed, meaning that multiple requests can be sent at the same time.
+- **Basic HTTP caching:** Requests for documents found in your `public` directory will be satisfied by the cache and will not hit your application.
 - **X-Sendfile support:** Large assets can be streamed directly from your filesystem without first being loaded into memory.
 
-Thruster normally is distributed as a Rails gem, but can also be built from source.
-To ensure that the resulting executable is compatible with the underlying operating system that is included in the Bun DockerHub image, add the following to your `Dockerfile`:
+Thruster is normally distributed as a Rails gem, but it can also be built from source.
+To ensure that the resulting executable is compatible with the underlying operating system included as your base DockerHub image, add the following to your `Dockerfile`:
 
 ```dockerfile
 # Build thruster
@@ -54,4 +54,4 @@ COPY --from=thruster /usr/local/bin/thrust /usr/local/bin/
 
 Finally, `thrust` needs to be added either as an `ENTRYPOINT` or prepended to the `CMD` in the `Dockerfile`.
 
-That's it. You now have Thruster installed and ready to use. No configuration was required, and no changes to your application were needed.
+That's it. You now have Thruster installed and ready to use. No configuration is required, and no changes to your application are needed.
