@@ -64,7 +64,7 @@ Rails will provide you with a `Dockerfile` when you create your application, but
 !!! note
     It's even possible that the Rails-provided Dockerfile never worked in the first place. For example, starting on February 14th, 2025, Ruby Docker images [no longer included the `libyaml-dev` module](https://github.com/docker-library/ruby/pull/493).
     This broke the Rails-provided Dockerfile. The [fix](https://github.com/rails/rails/pull/54237) was straightforward
-    and merged into Rails source on January 14th. Unfortunately, this fix was not included in a release until Rails [8.0.2](https://rubygems.org/gems/rails/versions/8.0.2) on March 12th, 2025. So for nearly a month, the Dockerfile produced by the latest released Rails version did not work with the latest released Ruby version. At the time of this writing, new projects created by previous versions of Rails still produce Dockerfiles that don't work.
+    and merged into Rails source on January 14th. Unfortunately, this fix was not included in a release until Rails [8.0.2](https://rubygems.org/gems/rails/versions/8.0.2) on March 12th, 2025. So for nearly a month, the Dockerfile produced by the latest released Rails version did not work with the latest released Ruby version. At the time of this writing, new projects created by previous versions of Rails still produce Dockerfiles that don't work with the latest version of Ruby.
 
 Fly.io provides a [dockerfile-rails](https://github.com/fly-apps/dockerfile-rails?tab=readme-ov-file#overview)
 generator that can examine your code and provide you with a new `Dockerfile` that matches your application.

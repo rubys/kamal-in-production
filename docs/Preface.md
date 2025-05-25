@@ -1,5 +1,8 @@
 # Preface
 
+!!! overview
+    - Production is more than copying files and starting a process.
+
 My name is Sam Ruby. I work for [Fly.io](https://fly.io) because I believe in Platform as a Service (PaaS) in general, and in our company's offering in particular.
 I am writing this book because I believe in Kamal. Yes, it is indeed possible to endorse both. It is also possible to switch back and forth, and even run them side by side. I have done all of these things.
 

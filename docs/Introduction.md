@@ -1,5 +1,8 @@
 # Introduction
 
+!!! overview
+    - To truly understand Kamal, you need to become familiar with the greater Docker ecosystem.
+
 The goal of this book is to walk you step by step through your first deployment to production using Kamal.
 
 It is written for developers who are familiar with a web application framework like Ruby on Rails, but perhaps not so much with Docker, and may not have experience deploying their applications in production.
