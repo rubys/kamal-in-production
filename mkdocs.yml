@@ -1,5 +1,5 @@
-site_name: Deploying with Kamal
-repo_url: https://github.com/mkdocs/mkdocs/
+site_name: Using Kamal 2.0 in Production
+repo_url: https://github.com/rubys/kamal-in-production/
 edit_uri: blob/master/docs/
 
 nav:

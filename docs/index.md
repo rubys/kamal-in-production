@@ -1,4 +1,4 @@
-# Deploying with Kamal
+# Using Kamal 2.0 in Production
 
 by Sam Ruby
 

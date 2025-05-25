@@ -61,7 +61,7 @@ This book is for busy developers who want to get up and running quickly. So be a
   [Fly.io documentation](https://fly.io/docs/rails/cookbooks/),
   which describes the thinking behind my contributions to the Rails-provided Dockerfile.
 - It is not a comprehensive guide to Kamal, describing every possible command you could ever use, in alphabetical order.
-  [See the Assemble chapter for references.](Assemble.md)
+  See the [Assemble chapter](Assemble.md) for references.
 
 Instead, this is a book on *Deployment to Production*, making heavy use of Kamal. It will show you the steps you need to take, and the order in which to take them. It will show you where the gaps are, and what you can use to fill those gaps.
 
