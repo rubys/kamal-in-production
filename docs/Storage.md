@@ -27,7 +27,7 @@ hetzner:
   region: <%= ENV["REGION"] %>
   bucket: <%= ENV["BUCKET_NAME"] %>
 
-# Use bin/rails credentials:edit to set the AWS secrets 
+# Use bin/rails credentials:edit to set the AWS secrets
 # (as aws:access_key_id|secret_access_key)
 # amazon:
 #   service: S3
@@ -45,7 +45,7 @@ hetzner:
 #   credentials: <%= Rails.root.join("path/to/gcs.keyfile") %>
 #   bucket: your_own_bucket-<%= Rails.env %>
 
-# Use bin/rails credentials:edit to set the Azure Storage secret 
+# Use bin/rails credentials:edit to set the Azure Storage secret
 # (as azure_storage:storage_access_key)
 # microsoft:
 #   service: AzureStorage

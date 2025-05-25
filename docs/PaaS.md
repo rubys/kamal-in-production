@@ -9,18 +9,18 @@ Time to address the elephant in the room: why is an employee of a PaaS company w
 
 Had Kamal 2.0 existed before I joined Fly.io, I probably would have gone with that, which in the long run would have been a loss, as I've learned so much.
 
-And I certainly agree that Kamal was the right bet for 37signals.  
+And I certainly agree that Kamal was the right bet for 37signals.
 [The Big Cloud Exit FAQ](https://world.hey.com/dhh/the-big-cloud-exit-faq-20274010)
 
-I encourage everybody to watch David Heinemeier Hansson's Rails World 2024 Opening Keynote.  
-[Watch the keynote](https://www.youtube.com/watch?v=-cEn_83zRFw)  
+I encourage everybody to watch David Heinemeier Hansson's Rails World 2024 Opening Keynote.
+[Watch the keynote](https://www.youtube.com/watch?v=-cEn_83zRFw)
 Some of the points DHH makes do not apply to Fly.io; other parts I disagree with, but come to your own conclusion.
 
 But I will post a few topics for you to ponder:
 
 - If your application is only running for 60 hours a week, why pay for 168?
 - Part of Rails' core strength is Convention over Configuration and the Menu is Omakase, as is No One Paradigm and Provide Sharp Knives.
-  [Rails Doctrine](https://rubyonrails.org/doctrine)  
+  [Rails Doctrine](https://rubyonrails.org/doctrine)
   When evaluated against these criteria, Kamal and PaaS providers come on strong in some areas and weaker in others.
 - Is managing host availability and security part of your core business, or would you rather leave that to others?
 

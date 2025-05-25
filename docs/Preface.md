@@ -31,5 +31,5 @@ This book is about my journey. I'm sharing it in the hope that it will inspire y
 
 ---
 
-**Sam Ruby**  
+**Sam Ruby**
 2025-05-26

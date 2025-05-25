@@ -151,7 +151,7 @@ logging: # (12)!
 2. **image** the desired name of the image in the docker registry. Built impages will be pushed to this name, and Kamal will pull this named image to the target host(s) upon deploy.
 3. You put the IP address of your host in this file twice: once as the deployment target, and once as your builder.
 4. You also put the IP address of your host here.
-5. You put your domain name in the proxy section; HTTPS certificates will be provided for you using 
+5. You put your domain name in the proxy section; HTTPS certificates will be provided for you using
   [Let's Encrypt](https://letsencrypt.org/).
 6. In the registry section, you select your container registry server, which defaults to Docker Hub. You then provide the username and password needed to access that container registry server. The password secret should always be an access token provided by `.kamal/secrets`.
 7. The default for building is to use your last git commit. Initially, it is sometimes easier to deploy the files as they exist on your development machine until things are working; that's what `context: .` does. This does mean that at times you will deploy changes and not commit them; for this reason, it is recommended that you delete this line once you are comfortable with your setup.

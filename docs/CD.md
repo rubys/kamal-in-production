@@ -4,18 +4,18 @@
     - Setting GitHub secrets
     - Creating a GitHub action
 
-At this point, we can deploy our software to either our main site or a staging site with a single command. Let's take the next step and automate the deployment process. We will use GitHub Actions to deploy our software to our staging area. This will allow us to deploy our software with a single push to the repository.  
+At this point, we can deploy our software to either our main site or a staging site with a single command. Let's take the next step and automate the deployment process. We will use GitHub Actions to deploy our software to our staging area. This will allow us to deploy our software with a single push to the repository.
 As with other aspects of Kamal, this can be done by taking three small steps.
 
-For this chapter, we will use the Rails example application defined in [Local](Local.md), and automatically deploy it to a staging server every time we push to the main branch of the repository—but only if the tests pass.  
+For this chapter, we will use the Rails example application defined in [Local](Local.md), and automatically deploy it to a staging server every time we push to the main branch of the repository—but only if the tests pass.
 Your processes and needs may be different, but the steps should be similar.
 
 ---
 
 ## Setting GitHub Secrets
 
-The first step is to set up the secrets in GitHub.  
-[GitHub Actions: Using secrets in GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions)  
+The first step is to set up the secrets in GitHub.
+[GitHub Actions: Using secrets in GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions)
 This is done by going to the repository and selecting the Settings tab. From there, select the Secrets tab and add the following secrets:
 
 - `SSH_PRIVATE_KEY` – The private key used to connect to the server
@@ -27,11 +27,11 @@ This is done by going to the repository and selecting the Settings tab. From the
 - `REGION` – The region for your S3 object storage
 - `BUCKET_NAME` – The bucket name for your S3 object storage
 
-If you generated a new SSH key when you [assembled your ingredients](Assemble.md#ssh-key), 
+If you generated a new SSH key when you [assembled your ingredients](Assemble.md#ssh-key),
 the `SSH_PRIVATE_KEY` can be found by running `cat ~/.ssh/id_ed25519` on your local machine.
 The `RAILS_MASTER_KEY` can be found by running `cat config/master.key` in your Rails application. The rest you can get from your password manager.
 
-Yes, this means that your secrets will need to be maintained in two places. This is unfortunate but necessary, as GitHub can't access your password manager, and secrets placed in GitHub can't be retrieved.  
+Yes, this means that your secrets will need to be maintained in two places. This is unfortunate but necessary, as GitHub can't access your password manager, and secrets placed in GitHub can't be retrieved.
 Fortunately, secrets rarely change, so this is not a big issue.
 
 As an alternative to using the web interface, you can use the [GitHub CLI](https://github.com/cli/cli?tab=readme-ov-file#installation) to set the secrets. Here are some example commands:
@@ -77,7 +77,7 @@ Following that are a number of jobs. The last job is named `test` and runs the t
 # .kamal/secrets file with the .kamal/secrets.cd file. This last change is committed to git locally but never pushed to the repository.
 ```
 
-If you don't have an existing `.github/workflows/ci.yml` file, simply create one. If you do have a test job, remove the `needs: test` line from the deploy job.  
+If you don't have an existing `.github/workflows/ci.yml` file, simply create one. If you do have a test job, remove the `needs: test` line from the deploy job.
 If you have a non-Ruby application, you can install Kamal by adding the following after the Ruby setup step:
 
 ```yaml
