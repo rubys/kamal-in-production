@@ -10,14 +10,14 @@ Since [2008](https://rubyonrails.org/2008/4/23/agile-web-development-with-rails-
 I have also been a [contributor to the Ruby on Rails framework itself](https://contributors.rubyonrails.org/contributors/sam-ruby/commits), and in particular
 [contributed heavily](https://github.com/rails/rails/blame/7-1-stable/railties/lib/rails/generators/rails/app/templates/Dockerfile.tt)
 to the `Dockerfile` that was originally shipped with Rails 7.1.
-[DHH said that he liked what we were doing.](https://x.com/dhh/status/1632044101418745864)
+[DHH said that he liked what Fly.io was doing.](https://x.com/dhh/status/1632044101418745864)
 
 Over the years, I've written and deployed a number of Rails applications, primarily to keep my skills fresh.
 In 2022, I wrote a [dance showcase application](https://github.com/rubys/showcase#showcase). It is open source and free of charge. I initially deployed it on a Mac Mini in my attic, but became concerned that a power or network outage would make this application unavailable while a dance showcase event was taking place when the application's functionality is most critical.
 I therefore explored a number of cloud offerings to host my application. I chose Fly.io, and as luck would have it, at the time they were looking for a Rails specialist, so I [unretired](https://intertwingly.net/blog/2022/08/13/Unretiring).
 
 At the time of this writing, the app is running on twelve hosts, serving 65 dance studios in eight countries on four continents.
-It is also deployed on Hetzner via Kamal. It also has two companion applications, both written in JavaScript. These application are also deployed both on Fly.io and on Hetzner.
+It is also deployed on Hetzner via Kamal. It also has two companion applications, both written in JavaScript. These application are also deployed both on Fly.io at [smooth.fly.dev](https://smooth.fly.dev/) and on Hetzner at [showcase.party](https://showcase.party/studios/). View the maps and try the demo.
 
 [**Rails 8.0: No PaaS Required**](https://rubyonrails.org/2024/11/7/rails-8-no-paas-required) was released in November of 2024. Truth be told, a PaaS never has been required. In 2008, DHH wrote
 [*Myth #1: Rails is hard to deploy*](https://dhh.dk/posts/30-myth-1-rails-is-hard-to-deploy):
