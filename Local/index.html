@@ -1023,7 +1023,7 @@ Your <code>log</code> and <code>storage</code> will be read and written to by th
 <p class="admonition-title">Note</p>
 <p>It's even possible that the Rails-provided Dockerfile never worked in the first place. For example, starting on February 14th, 2025, Ruby Docker images <a href="https://github.com/docker-library/ruby/pull/493">no longer included the <code>libyaml-dev</code> module</a>.
 This broke the Rails-provided Dockerfile. The <a href="https://github.com/rails/rails/pull/54237">fix</a> was straightforward
-and merged into Rails source on January 14th. Unfortunately, this fix was not included in a release until Rails <a href="https://rubygems.org/gems/rails/versions/8.0.2">8.0.2</a> on March 12th, 2025. So for nearly a month, the Dockerfile produced by the latest released Rails version did not work with the latest released Ruby version. At the time of this writing, new projects created by previous versions of Rails still produce Dockerfiles that don't work.</p>
+and merged into Rails source on January 14th. Unfortunately, this fix was not included in a release until Rails <a href="https://rubygems.org/gems/rails/versions/8.0.2">8.0.2</a> on March 12th, 2025. So for nearly a month, the Dockerfile produced by the latest released Rails version did not work with the latest released Ruby version. At the time of this writing, new projects created by previous versions of Rails still produce Dockerfiles that don't work with the latest version of Ruby.</p>
 </div>
 <p>Fly.io provides a <a href="https://github.com/fly-apps/dockerfile-rails?tab=readme-ov-file#overview">dockerfile-rails</a>
 generator that can examine your code and provide you with a new <code>Dockerfile</code> that matches your application.</p>
