@@ -5,7 +5,7 @@
 
 In your `config/deploy.yml`, you listed your secrets but not their values. Those values are extracted using a script that you can find in `.kamal/secrets`.
 
-```yaml title=".kamal/secrets" hl_lines="9-20 26 30" linenums="1"
+```yaml title=".kamal/secrets" hl_lines="9-29 35 39" linenums="1"
 # Secrets defined here are available for reference under registry/password,
 # env/secret, builder/secrets, and accessories/*/env/secret in
 # config/deploy.yml. All secrets should be pulled from either password
