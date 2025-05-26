@@ -13,7 +13,7 @@ Time to address the elephant in the room: why is an employee of a PaaS company w
 
 Had Kamal 2.0 existed before I joined Fly.io, I probably would have gone with that, which in the long run would have been a loss, as I've learned so much.
 
-And I certainly agree that Kamal was the [right bet]((https://world.hey.com/dhh/the-big-cloud-exit-faq-20274010)) for 37signals.
+And I certainly agree that Kamal was the [right bet](https://world.hey.com/dhh/the-big-cloud-exit-faq-20274010) for 37signals.
 
 I encourage everybody to watch David Heinemeier Hansson's
 [Rails World 2024 Opening Keynote](https://www.youtube.com/watch?v=-cEn_83zRFw).
