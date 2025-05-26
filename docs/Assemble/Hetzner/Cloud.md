@@ -2,12 +2,12 @@
 
 ## Cloud Create
 
-![Create A Server - select location and OS](/images/hetzner-cloud-create.png)
+![Create A Server - select location and OS](../cloud-create.png)
 
 ## Firewalls Tab
 
-![Individual server view - Firewalls tab](/images/hetzner-cloud-firewalls-tab.png)
+![Individual server view - Firewalls tab](./cloud-firewalls-tab.png)
 
 ## Inbound Rules
 
-![Inbound rules - allowing ports 22, 80, and 443](/images/hetzner-cloud-inbound-rules.png)
+![Inbound rules - allowing ports 22, 80, and 443](./cloud-inbound-rules.png)
