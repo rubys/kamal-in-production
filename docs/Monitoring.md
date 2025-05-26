@@ -66,6 +66,8 @@ systemctl start vector
 
 Note: The service you choose can be one that you write yourself. Vector can be used to send logs to [NATS](https://nats.io/), which you can subscribe to in a service that you write yourself. Vector can even be used to send logs to multiple services at once.
 
+Fly.io has published a blueprint: [Observability for User Apps](https://fly.io/docs/blueprints/observability-for-user-apps/) which includes two example apps: [fly-telemetry](https://github.com/superfly/fly-telemetry) and [nat-stream](https://github.com/fly-apps/natstream) (along with a [demo](https://natstream.fly.dev/)). You can use them on your own infrastructure, you simply would need to adjust the listening port and add authentication.
+
 ---
 
 ## Consuming your own logs
@@ -76,7 +78,7 @@ One possibly underappreciated feature of Kamal's proxy is that it can be used wi
 
 To start with, go into the service for which you registered the domain name, and add a second **A** record for the second application. If you are using Cloudflare, once again specify DNS only by unchecking the orange proxy status button. Feel free to name the subdomain whatever you like. As an example, my primary application is at `showcase.party`, and my logger application is at `logger.showcase.party`. Feel free to use the same IP address for both. Then go into the second application and add the domain name to the `config/deploy.yml` file for that application.
 
-That's it. You can now use `kamal deploy` on your logger application, and it will be available at `logger.showcase.party`.
+That's it. You can now use `kamal deploy` on your logger application, and it will be available at the DNS name you specified.
 
 For this application, you also need to feed it data. For that, use [NATS](https://nats.io/). Install it on your host machine with:
 
