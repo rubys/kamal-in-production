@@ -47,10 +47,16 @@ BUCKET_NAME=$(kamal secrets extract BUCKET_NAME ${SECRETS})
 # RAILS_MASTER_KEY=$(cat config/master.key)
 ```
 
-This file has examples of three ways to get your secrets: from a password manager, from the environment, or from a file. The password manager is the most secure, and is the one we recommend you use.
+This file has examples of four ways to get your secrets: from a password manager, obtaining the
+output from a command, or from the environment, or from a file. The password manager is the most secure, and is the one we recommend you use.
 
 Uncomment this section, [select the appropriate adapter](https://kamal-deploy.org/docs/commands/secrets/),
 and add the Object Storage (S3) secrets, unless you have already added them to `config/credentials.yml.enc`.
+
+!!! note
+    Other popular ways are `.env` files and, for Rails, `config/credentials.yml`. `.env` files are the easiest to use, but also are the easiest to accidentally expose your secrets.
+    `config/credentials.yml` is better, but you still are left with a master key that you need
+    to provide in other ways.
 
 Now place all of the secrets you gathered while assembling your ingredients into your password manager. You can find the `MASTER_KEY` in your Rails app at `config/master.key`.
 
