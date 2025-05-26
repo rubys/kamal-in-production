@@ -48,14 +48,14 @@ You can also time share a machine with others by requesting a Virtual Private Se
 Most Kamal demos start with [Hetzner](https://www.hetzner.com/).
 [Digital Ocean posts a list of alternatives.](https://www.digitalocean.com/resources/articles/hetzner-alternatives)
 
-For demo/hobby purposes head to Hetzner Cloud. You can get a VPS starting at $4.59/month. Such a machine could handle up to around 20 requests per second. (1)
+For demo/hobby purposes head to Hetzner Cloud. You can get a VPS starting at €3.79/month. Such a machine could handle up to around 20 requests per second. (1)
 Note that while a small VPS is sufficient for running a small application, this book describes how you can run multiple applications, a staging environment, and even a build server on a single host.
 For that, you will need more RAM, and possibly more persistent storage than you will get with the smallest available VPS.
 { .annotate }
 
 1. Source: [How (and why) to run SQLite in production: RubyConf Taiwan 2023](https://fractaledmind.github.io/2023/12/23/rubyconftw/)
 
-For production purposes head to Hetzner Robot and consider a dedicated machine. For $44.00/month you get 14 cores, 64GB RAM, 1TB NVMe, and 250 TB/month bandwidth across a 1GB/s port.
+For production purposes head to Hetzner Robot and consider a dedicated machine. For €39.00/month you get 14 cores, 64GB RAM, 1TB NVMe, and unlimited bandwidth across a 1GB/s port. There is a setup fee of €39.00 required.
 Such a machine should be able to process hundreds, and possibly even a small number of thousands, of requests per second. (1)
 { .annotate }
 
@@ -63,7 +63,9 @@ Such a machine should be able to process hundreds, and possibly even a small num
 
 Sign up, provide your public ssh key, select the latest LTS version of Ubuntu (24.04). As a first time customer, this process will take about fifteen minutes, and you will end up with an IPv4 address. Once you are an established customer, this will go quicker.
 
-Before proceeding, click on the Firewall tab, select the WebServer template, and click Apply and Save.
+Before proceeding, set up a firewall to only allow ports 22, 80, and 443 access.  For robot, click on the Firewall tab, select the WebServer template, and click Apply and Save.
+
+See screenshots: [Hetzner Cloud](Assemble/Hetzner/Cloud.md), [Hetzner Robot](Assemble/Hetzner/Robot.md)
 
 ---
 
@@ -127,7 +129,7 @@ Not recommended, but you can directly put your passwords into `.kamal/secrets`, 
 
 Kamal can use Docker to build your images locally, but there are at least two good reasons why you wouldn't want to do so:
 
-- If you are developing on ARM64 (like Apple Silicon), but you want to deploy on AMD64 (x86 64-bit), the build can be quite slow ([example](https://kamal-deploy.org/docs/configuration/builder-examples/#using-remote-builder-for-single-arch)) and [buggy](https://github.com/docker/for-mac/issues/5342#issuecomment-779133157).
+- If you are developing on ARM64 (like Apple Silicon), but you want to deploy on AMD64 (x86 64-bit), the build can be [quite slow](https://kamal-deploy.org/docs/configuration/builder-examples/#using-remote-builder-for-single-arch)) and [buggy](https://github.com/docker/for-mac/issues/5342#issuecomment-779133157).
 - If you have an asymmetric network connection (where downloads are faster than uploads), you may benefit from a configuration where you only upload your changed source to another server, and that server is responsible for uploading the considerably larger resulting Docker image.
 
 A builder is simply a host that you have SSH access to and that is running Docker—preferably using the target instruction set architecture. You already have exactly that. Installing Docker on the host that you will be running your application is something Kamal does for you anyway. And that host can run multiple containers, and will obviously be running using the same instruction set architecture as your application. You just need to make sure that the host has enough storage and memory capacity to run both builds and your application. A ballpark of 8GB of RAM and 20GB of free storage space would be sufficient.
