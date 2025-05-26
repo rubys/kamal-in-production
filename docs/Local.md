@@ -7,17 +7,17 @@ The first step is both obvious and often overlooked: deploy your application fir
 
 Consider a simple Rails application. For example, this is from the Depot application in Agile Web Development with Rails:
 
-```sh
-rails new depot --css tailwind
+```bash
+$ rails new depot --css tailwind
 
-cd depot
+$ cd depot
 
-bin/rails generate scaffold Product \
+$ bin/rails generate scaffold Product \
   title:string description:text image:attachment price:decimal
 
-bin/rails active_storage:install
+$ bin/rails active_storage:install
 
-bin/rails db:migrate
+$ bin/rails db:migrate
 ```
 
 Now create a file named `compose.yml` and place within it the following:

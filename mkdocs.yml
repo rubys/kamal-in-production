@@ -40,6 +40,7 @@ theme:
     repo: fontawesome/brands/github
   features:
     - content.code.annotate
+    - content.code.copy
     - content.action.edit
     - navigation.tabs
     - navigation.top
@@ -52,6 +53,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
