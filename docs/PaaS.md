@@ -37,3 +37,11 @@ I'll close with a challenge. I posted a trivial application in the [Local](Local
 - Render ([docs](https://render.com/docs/deploy-rails))
 
 Ideally, you will have success with multiple vendors. Then you can pick the one that is best suited to your needs—and switch later should you desire.
+
+## Related Reading:
+
+* [The “No PaaS Required” Approach in Rails 8: Balancing Freedom and Complexity](https://patrickkarsh.medium.com/the-no-paas-required-approach-in-rails-8-balancing-freedom-and-complexity-c4f751d1d5a3) by [Patrick Karsh](https://patrickkarsh.medium.com/)
+* [No PaaS Required? The Developers Guide to Kamal vs PaaS](https://judoscale.com/blog/kamal-vs-paas) by [Jeff Morhous](https://github.com/JeffMorhous)
+* [Is No PaaS really a good idea for Rails?](https://www.honeybadger.io/blog/rails-no-paas/) by [Jeffery Morhous](https://www.honeybadger.io/blog/authors/jefferymorhous/)
+
+If you find other articles that aren't merely based on reading and restating the content of marketing material produced by either the Rails community or PaaS vendors, please create a pull request to add them to this list.
