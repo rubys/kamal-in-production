@@ -2,7 +2,7 @@
 
 ## Cloud Create
 
-![Create A Server - select location and OS](../cloud-create.png)
+![Create A Server - select location and OS](./cloud-create.png)
 
 ## Firewalls Tab
 
