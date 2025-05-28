@@ -1,4 +1,4 @@
-# Plating Your Disk
+# Plating Your Dish
 
 !!! overview
     - Running `kamal setup` and `kamal deploy`
