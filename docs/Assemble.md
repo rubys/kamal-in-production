@@ -1,12 +1,13 @@
 # Assemble Your Ingredients
 
 !!! overview
-    - Obtaining an SSH key
-    - Acquiring a machine
-    - Purchasing a Domain Name
-    - Selecting a Container Registry
-    - Using a Password Manager
-    - Setting up a Builder
+    - Obtain an SSH key
+    - Acquire a Machine
+    - Add Object Storage
+    - Purchase a Domain Name
+    - Select a Container Registry
+    - Use a Password Manager
+    - Set up a Builder
 
 Deploying to production is not hard at all; it's just a number of small steps. These steps will go quicker if you do them in the correct order, and if you start with a code base that you have deployed locally first.
 But first, let's review what resources are available:
