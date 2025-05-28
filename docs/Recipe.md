@@ -148,7 +148,7 @@ logging: # (12)!
 ```
 
 1. **service** is the container name prefix. Use whatever you want here.
-2. **image** the desired name of the image in the docker registry. Built impages will be pushed to this name, and Kamal will pull this named image to the target host(s) upon deploy.
+2. **image** the desired name of the image in the docker registry. Built images will be pushed to this name, and Kamal will pull this named image to the target host(s) upon deploy.
 3. You put the IP address of your host in this file twice: once as the deployment target, and once as your builder.
 4. You also put the IP address of your host here.
 5. You put your domain name in the proxy section; HTTPS certificates will be provided for you using
