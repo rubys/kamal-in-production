@@ -40,8 +40,7 @@ secrets:
     file: ./config/master.key
 ```
 
-Install Docker
-[https://docs.docker.com/desktop/](https://docs.docker.com/desktop/)
+[Install Docker](https://docs.docker.com/desktop/)
 and then run:
 
 ```sh
