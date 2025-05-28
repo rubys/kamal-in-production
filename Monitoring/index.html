@@ -732,6 +732,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#consuming-your-own-logs" class="md-nav__link">
     <span class="md-ellipsis">
       Consuming your own logs
@@ -1005,6 +1014,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#consuming-your-own-logs" class="md-nav__link">
     <span class="md-ellipsis">
       Consuming your own logs
@@ -1059,17 +1077,27 @@
 <p>Kamal provides a command to watch your logs in real time: <code>bin/kamal app logs --follow</code>. This is useful if you are actively watching at the time of a failure.</p>
 <p>Docker captures logs and places them in <code>/var/lib/docker/containers/*/local-logs/*.log</code>. You can use a tool like <code>grep</code> to search these logs, but it is not very user-friendly. You also have to know which container to look in.</p>
 <p>Kamal (by default) keeps the last five containers, so if you deploy infrequently your logs may have gaps, and if you deploy too frequently you may not have log entries that span enough time.</p>
-<p>A more robust approach is to send your logs to a service like <a href="https://www.datadoghq.com/">DataDog</a>, <a href="https://www.elastic.co/">Elasticsearch</a>, or <a href="https://grafana.com/oss/loki/">Loki</a>. These services can be used to search your logs and create alerts when certain conditions are met.</p>
-<p>Most come with some sort of free tier and can be set up in minutes. Prices are generally based on the amount of data you send them.
-<a href="https://dozzle.dev/">Dozzle</a> and <a href="http://logdy.dev">Logdy</a> are free alternatives.
-Some can be self-hosted, but if you go this route you will want to set up a separate machine to run them on.</p>
-<p>The easiest way to set this up is to install a tool named <a href="https://vector.dev/">Vector</a>. Vector can be used to send your logs to a number of services and can filter your logs before they are sent.</p>
+<p><a href="https://mkaz.me/">Michal Kazmierczak</a> posted <a href="https://mkaz.me/blog/2024/self-hosted-overvability-for-ruby-on-rails-apps-with-kamal-and-opentelemetry/">Self-hosted observability for Ruby on Rails apps with Kamal and OpenTelemetry</a> along with a <a href="https://github.com/michal-kazmierczak/opentelemetry-rails-example">GitHub repository</a> containing a <a href="https://github.com/michal-kazmierczak/opentelemetry-rails-example/blob/main/rails_app/config/deploy.yml"><code>config/deploy.yml</code></a> to be used with Kamal.</p>
+<p>Included in the repository is a note:</p>
+<blockquote>
+<p><strong>Storage and query backends</strong>
+Since this demo presents a self-hosted approach, this part represents the long-term storage and query API backends. It's strongly recommended to run these services on a separate host to increase the likelihood of accessing observability data during application outages.</p>
+</blockquote>
+<p>This presents a challenge. Looking at the tools Kamal provides:</p>
+<ul>
+<li>Different Kamal apps with different iamges can be run on different machines. Access to these apps is through a HTTP proxy.</li>
+<li><a href="https://kamal-deploy.org/docs/configuration/roles/">Roles</a> can be used to run the same image on different machines, generally with a different start command.</li>
+<li><a href="https://kamal-deploy.org/docs/configuration/accessories/">Accessories</a> run different images in separarate containers on the same server.</li>
+</ul>
+<p>If you are running a single app, accessories are fine for collection and processing agents. But since I am running multiple applications, I went a different way.</p>
+<h2 id="vector">Vector</h2>
+<p>Core to data collection and distribution is a tool named <a href="https://vector.dev/">Vector</a>. Vector can be used to send your logs to a number of services and can filter your logs before they are sent. It is easy to run Vector outside of a container, and such a process will have direct and full access to logs from all of your Docker containers.</p>
 <p>To install Vector, SSH into your host and run the following commands:</p>
 <div class="highlight"><pre><span></span><code>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-L<span class="w"> </span>https://setup.vector.dev<span class="k">)</span><span class="s2">&quot;</span>
 apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>vector
 </code></pre></div>
 <p>This will add the Vector repository and then install the vector package. If you are using another operating system, refer to the
-<a href="https://vector.dev/docs/setup/installation/">installtion docs</a> for more options.</p>
+<a href="https://vector.dev/docs/setup/installation/">installation docs</a> for more options.</p>
 <p>Once installed, you will need to configure Vector. Vector is configured using a file named <code>/etc/vector.yaml</code>. Instructions for a number of services can be found in the <a href="https://vector.dev/docs/reference/configuration/sinks/">Vector documentation</a>.</p>
 <p>Run <code>nano /etc/vector.yaml</code>, and replace the file with the following:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">sources</span><span class="p">:</span>
@@ -1128,6 +1156,10 @@ systemctl<span class="w"> </span>restart<span class="w"> </span>vector.service
 <p>This is a simple example of what is possible. I also use the Kamal proxy to host a <a href="https://fly.io/blog/print-on-demand/">third application</a>, one that uses <a href="https://pptr.dev/">Puppeteer</a> to take screenshots of the pages that are requested. Serving PDFs is often easier than talking people through how to print a web page.</p>
 <hr />
 <h2 id="additional-monitoring-tools">Additional Monitoring Tools</h2>
+<p>You can also send your logs to a service like <a href="https://www.datadoghq.com/">DataDog</a>, <a href="https://www.elastic.co/">Elasticsearch</a>, or <a href="https://grafana.com/oss/loki/">Loki</a>. These services can be used to search your logs and create alerts when certain conditions are met.</p>
+<p>Most come with some sort of free tier and can be set up in minutes. Prices are generally based on the amount of data you send them.
+<a href="https://dozzle.dev/">Dozzle</a> and <a href="http://logdy.dev">Logdy</a> are free alternatives.
+Some can be self-hosted, but again if you go this route you will want to set up a separate machine to run them on.</p>
 <p><a href="https://appsignal.com/">AppSignal</a>, <a href="https://www.honeybadger.io/">Honeybadger</a>, <a href="https://newrelic.com/">New Relic</a>, <a href="https://rollbar.com/">Rollbar</a>, <a href="https://sentry.io/">Sentry</a>, and <a href="https://scoutapm.com/">Scout</a> are tools that can be used to monitor your application's performance and create alerts when certain conditions are met.</p>
 <p>Mobi/dev has a list of <a href="https://mobidev.biz/blog/ruby-on-rails-security-guide-protecting-your-business-and-customer-data">guide for protecting your business and customer data</a>.</p>
 <p>The host you select will often offer tools to prevent DDoS attacks and to monitor your server's performance. You will want to enable these. <a href="https://www.cloudflare.com/lp/dg/brand/ddos/">Cloudflare DDoS protection</a> may be worth exploring.</p>
