@@ -72,5 +72,5 @@ config.active_storage.service = :hetzner
 Finally, add the gem needed to access s3:
 
 ```sh
-bundle add ws-sdk-s3
+bundle add aws-sdk-s3
 ```

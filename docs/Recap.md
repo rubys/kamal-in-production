@@ -9,7 +9,7 @@ This is a small book, but it covered a lot of ground, and quickly.
 
 - First, we stressed the importance of deploying locally first. It is hard enough debugging why your application can't start in an unfamiliar environment; it is doubly as hard if you've never deployed your application at all.
 - Then we covered all the ingredients you need to gather in order to successfully deploy (including some optional ingredients): an SSH key, a machine (dedicated or VPS), a domain name, a container registry, a password manager, and a builder.
-- We updated `config/deploy.yml`, `.kamal/secrets`, `config/storage.yml`, `config/environment/production.rb`, and placed our secrets into a password manager.
+- We updated `config/deploy.yml`, `.kamal/secrets`, `config/storage.yml`, `config/environments/production.rb`, and placed our secrets into a password manager.
 - We ran `kamal setup`.
 - We secured our deployment with an SSH key, a password manager, a firewall, and a plan to keep our application container and server updated.
 - We installed and configured Litestream for continuous streaming backups, and used `rclone` for offsite backups.
