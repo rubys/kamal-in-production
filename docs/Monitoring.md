@@ -13,6 +13,10 @@ Docker captures logs and places them in `/var/lib/docker/containers/*/local-logs
 
 Kamal (by default) keeps the last five containers, so if you deploy infrequently your logs may have gaps, and if you deploy too frequently you may not have log entries that span enough time.
 
+## Observability
+
+[Observability](https://opentelemetry.io/docs/concepts/observability-primer/) is more than just logs.
+
 [Michal Kazmierczak](https://mkaz.me/) posted [Self-hosted observability for Ruby on Rails apps with Kamal and OpenTelemetry](https://mkaz.me/blog/2024/self-hosted-overvability-for-ruby-on-rails-apps-with-kamal-and-opentelemetry/) along with a [GitHub repository](https://github.com/michal-kazmierczak/opentelemetry-rails-example) containing a [`config/deploy.yml`](https://github.com/michal-kazmierczak/opentelemetry-rails-example/blob/main/rails_app/config/deploy.yml) to be used with Kamal.
 
 Included in the repository is a note:

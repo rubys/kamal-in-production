@@ -23,7 +23,7 @@ Inside that directory is a directory called `volumes`. You created a volume call
 
 [Litestream](https://litestream.io/) is a tool that can be used to back up your database. It is free and open source, easy to set up, and can back up to the S3 Object Storage you have already set up. It can also be used to restore your database to a point in time.
 
-We could run it in your Kamal container, or as a Kamal accessory, but instead we are going to run it on your host machine. This ensures it is always running, and you don't have to worry about multiple instances running as you deploy new versions of your application.
+We could run it in your Kamal container, or as a Kamal accessory, but that requires building an image and pushing it to a repository.  Instead we are going to run it on your host machine.
 
 Following Litestream's [installation instructions](https://litestream.io/install/debian/), first SSH into your host and run the following commands:
 
