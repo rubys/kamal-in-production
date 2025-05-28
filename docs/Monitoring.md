@@ -13,13 +13,24 @@ Docker captures logs and places them in `/var/lib/docker/containers/*/local-logs
 
 Kamal (by default) keeps the last five containers, so if you deploy infrequently your logs may have gaps, and if you deploy too frequently you may not have log entries that span enough time.
 
-A more robust approach is to send your logs to a service like [DataDog](https://www.datadoghq.com/), [Elasticsearch](https://www.elastic.co/), or [Loki](https://grafana.com/oss/loki/). These services can be used to search your logs and create alerts when certain conditions are met.
+[Michal Kazmierczak](https://mkaz.me/) posted [Self-hosted observability for Ruby on Rails apps with Kamal and OpenTelemetry](https://mkaz.me/blog/2024/self-hosted-overvability-for-ruby-on-rails-apps-with-kamal-and-opentelemetry/) along with a [GitHub repository](https://github.com/michal-kazmierczak/opentelemetry-rails-example) containing a [`config/deploy.yml`](https://github.com/michal-kazmierczak/opentelemetry-rails-example/blob/main/rails_app/config/deploy.yml) to be used with Kamal.
 
-Most come with some sort of free tier and can be set up in minutes. Prices are generally based on the amount of data you send them.
-[Dozzle](https://dozzle.dev/) and [Logdy](http://logdy.dev) are free alternatives.
-Some can be self-hosted, but if you go this route you will want to set up a separate machine to run them on.
+Included in the repository is a note:
 
-The easiest way to set this up is to install a tool named [Vector](https://vector.dev/). Vector can be used to send your logs to a number of services and can filter your logs before they are sent.
+> **Storage and query backends**
+> Since this demo presents a self-hosted approach, this part represents the long-term storage and query API backends. It's strongly recommended to run these services on a separate host to increase the likelihood of accessing observability data during application outages.
+
+This presents a challenge. Looking at the tools Kamal provides:
+
+* Different Kamal apps with different iamges can be run on different machines. Access to these apps is through a HTTP proxy.
+* [Roles](https://kamal-deploy.org/docs/configuration/roles/) can be used to run the same image on different machines, generally with a different start command.
+* [Accessories](https://kamal-deploy.org/docs/configuration/accessories/) run different images in separarate containers on the same server.
+
+If you are running a single app, accessories are fine for collection and processing agents. But since I am running multiple applications, I went a different way.
+
+## Vector
+
+Core to data collection and distribution is a tool named [Vector](https://vector.dev/). Vector can be used to send your logs to a number of services and can filter your logs before they are sent. It is easy to run Vector outside of a container, and such a process will have direct and full access to logs from all of your Docker containers.
 
 To install Vector, SSH into your host and run the following commands:
 
@@ -29,8 +40,7 @@ apt-get install -y vector
 ```
 
 This will add the Vector repository and then install the vector package. If you are using another operating system, refer to the
-[installtion docs](https://vector.dev/docs/setup/installation/) for more options.
-
+[installation docs](https://vector.dev/docs/setup/installation/) for more options.
 
 Once installed, you will need to configure Vector. Vector is configured using a file named `/etc/vector.yaml`. Instructions for a number of services can be found in the [Vector documentation](https://vector.dev/docs/reference/configuration/sinks/).
 
@@ -125,6 +135,12 @@ This is a simple example of what is possible. I also use the Kamal proxy to host
 ---
 
 ## Additional Monitoring Tools
+
+You can also send your logs to a service like [DataDog](https://www.datadoghq.com/), [Elasticsearch](https://www.elastic.co/), or [Loki](https://grafana.com/oss/loki/). These services can be used to search your logs and create alerts when certain conditions are met.
+
+Most come with some sort of free tier and can be set up in minutes. Prices are generally based on the amount of data you send them.
+[Dozzle](https://dozzle.dev/) and [Logdy](http://logdy.dev) are free alternatives.
+Some can be self-hosted, but again if you go this route you will want to set up a separate machine to run them on.
 
 [AppSignal](https://appsignal.com/), [Honeybadger](https://www.honeybadger.io/), [New Relic](https://newrelic.com/), [Rollbar](https://rollbar.com/), [Sentry](https://sentry.io/), and [Scout](https://scoutapm.com/) are tools that can be used to monitor your application's performance and create alerts when certain conditions are met.
 
