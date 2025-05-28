@@ -1214,10 +1214,13 @@ If you are using CloudFlare, disable the "orange cloud" by clicking on the "Prox
 are alternatives. You can also use <a href="https://distribution.github.io/distribution/">CNCF's Distribution Registry</a> to self host a registry.</p>
 <p>Realistically, you can get a container registry for a small number of personal projects for free.</p>
 <p>When done you will end up with a rather opaque registry password that you will need later.</p>
-<p class="annotate">Note: Be aware of your container registry's visibility settings. Docker Hub repositories default to public, and Docker's free plan allows only a single private repository(1). A public repository is typically fine if your application's code is already public and you've followed the instructions in <a href="../Secrets/">Secrets</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="annotate">Be aware of your container registry's visibility settings. Docker Hub repositories default to public, and Docker's free plan allows only a single private repository(1). A public repository is typically fine if your application's code is already public and you've followed the instructions in <a href="../Secrets/">Secrets</a>.</p>
 <ol>
 <li>Container registries identify images using the format <code>username/repository:tag</code>. Kamal uses one repository per application and tags each built image with it's git revision SHA, as in <code>samruby/depot:b4a133e45d9dc7becf90f98bd045a6956e886a19</code></li>
 </ol>
+</div>
 <hr />
 <h2 id="password-manager-optional-but-highly-recommended">Password Manager (optional but highly recommended)</h2>
 <p>A password manager is a tool that stores your passwords in an encrypted form. If you are working as a team, a password manager can be used to share secrets.</p>
