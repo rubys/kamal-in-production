@@ -24,7 +24,7 @@ This presents a challenge. Looking at the tools Kamal provides:
 
 * Different Kamal apps with different iamges can be run on different machines. Access to these apps is through a HTTP proxy.
 * [Roles](https://kamal-deploy.org/docs/configuration/roles/) can be used to run the same image on different machines, generally with a different start command.
-* [Accessories](https://kamal-deploy.org/docs/configuration/accessories/) run different images in separarate containers on the same server.
+* [Accessories](https://kamal-deploy.org/docs/configuration/accessories/) run different images in separate containers on the same server.
 
 If you are running a single app, accessories are fine for collection and processing agents. But since I am running multiple applications, I went a different way.
 
