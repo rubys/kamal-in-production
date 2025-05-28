@@ -109,10 +109,11 @@ Realistically, you can get a container registry for a small number of personal p
 
 When done you will end up with a rather opaque registry password that you will need later.
 
-Note: Be aware of your container registry's visibility settings. Docker Hub repositories default to public, and Docker's free plan allows only a single private repository(1). A public repository is typically fine if your application's code is already public and you've followed the instructions in [Secrets](Secrets.md).
-{ .annotate }
+!!! note
+    Be aware of your container registry's visibility settings. Docker Hub repositories default to public, and Docker's free plan allows only a single private repository(1). A public repository is typically fine if your application's code is already public and you've followed the instructions in [Secrets](Secrets.md).
+    { .annotate }
 
-1. Container registries identify images using the format `username/repository:tag`. Kamal uses one repository per application and tags each built image with it's git revision SHA, as in `samruby/depot:b4a133e45d9dc7becf90f98bd045a6956e886a19`
+    1. Container registries identify images using the format `username/repository:tag`. Kamal uses one repository per application and tags each built image with it's git revision SHA, as in `samruby/depot:b4a133e45d9dc7becf90f98bd045a6956e886a19`
 
 ---
 
