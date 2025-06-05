@@ -35,6 +35,7 @@ I'll close with a challenge. I posted a trivial application in the [Local](Local
 - Heroku ([getting started](https://devcenter.heroku.com/articles/getting-started-with-rails8))
 - Railway ([guide](https://docs.railway.com/guides/rails))
 - Render ([docs](https://render.com/docs/deploy-rails))
+- Dokku ([deploying an app](https://dokku.com/docs/deployment/application-deployment/))
 
 Ideally, you will have success with multiple vendors. Then you can pick the one that is best suited to your needs—and switch later should you desire.
 
