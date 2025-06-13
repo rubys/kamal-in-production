@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../Local/">
-      
-      
-        <link rel="next" href="../Recipe/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Assemble - Using Kamal 2.0 in Production</title>
+        <title>Fly Explorer - Using Kamal 2.0 in Production</title>
       
     
     
@@ -70,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#assemble-your-ingredients" class="md-skip">
+        <a href="#fly-explorer" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Assemble
+              Fly Explorer
             
           </span>
         </div>
@@ -167,12 +163,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../Local/" class="md-tabs__link">
           
   
@@ -395,31 +389,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -432,7 +423,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             First Deploy
@@ -466,32 +457,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Assemble
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Assemble/" class="md-nav__link">
         
   
   
@@ -502,89 +471,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ssh-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      SSH Key
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#object-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Object Storage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#domain-name" class="md-nav__link">
-    <span class="md-ellipsis">
-      Domain Name
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#container-registry" class="md-nav__link">
-    <span class="md-ellipsis">
-      Container Registry
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#password-manager-optional-but-highly-recommended" class="md-nav__link">
-    <span class="md-ellipsis">
-      Password Manager (optional but highly recommended)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#builder-optional-but-recommended" class="md-nav__link">
-    <span class="md-ellipsis">
-      Builder (optional but recommended)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1050,63 +936,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ssh-key" class="md-nav__link">
+  <a href="#tldr" class="md-nav__link">
     <span class="md-ellipsis">
-      SSH Key
+      TL;DR:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#server" class="md-nav__link">
+  <a href="#what-you-are-looking-at" class="md-nav__link">
     <span class="md-ellipsis">
-      Server
+      What you are looking at
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#object-storage" class="md-nav__link">
+  <a href="#opinions" class="md-nav__link">
     <span class="md-ellipsis">
-      Object Storage
+      Opinions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#domain-name" class="md-nav__link">
+  <a href="#out-there" class="md-nav__link">
     <span class="md-ellipsis">
-      Domain Name
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#container-registry" class="md-nav__link">
-    <span class="md-ellipsis">
-      Container Registry
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#password-manager-optional-but-highly-recommended" class="md-nav__link">
-    <span class="md-ellipsis">
-      Password Manager (optional but highly recommended)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#builder-optional-but-recommended" class="md-nav__link">
-    <span class="md-ellipsis">
-      Builder (optional but recommended)
+      Out there
     </span>
   </a>
   
@@ -1128,7 +987,7 @@
 
 
   
-    <a href="https://github.com/rubys/kamal-in-production/blob/master/docs/Assemble.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/rubys/kamal-in-production/blob/master/docs/fly-explorer.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1136,123 +995,34 @@
   
 
 
-<h1 id="assemble-your-ingredients">Assemble Your Ingredients</h1>
-<div class="admonition overview">
-<p class="admonition-title">Overview</p>
-<ul>
-<li>Obtain an SSH key</li>
-<li>Acquire a Machine</li>
-<li>Add Object Storage</li>
-<li>Purchase a Domain Name</li>
-<li>Select a Container Registry</li>
-<li>Use a Password Manager</li>
-<li>Set up a Builder</li>
-</ul>
-</div>
-<p>Deploying to production is not hard at all; it's just a number of small steps. These steps will go quicker if you do them in the correct order, and if you start with a code base that you have deployed locally first.
-But first, let's review what resources are available:</p>
-<ul>
-<li><a href="https://kamal-deploy.org/">kamal-deploy.org</a> contains a 32 minute video demonstrating the creation and deployment of a simple application to a Hetzner server.</li>
-<li><a href="https://kamal-deploy.org/docs/">Kamal docs</a> contains some reference material that may be useful.</li>
-<li><a href="https://kamalmanual.com/handbook/">Kamal Handbook - The Missing Manual</a> is a short and practical book, and at the time of this writing is the only book on the subject.</li>
-</ul>
-<p>What follows is neither a video nor a manual, but rather a recipe. And like most recipes, it starts with assembling your ingredients. Along the way, we'll share some general ideas of what prices you can expect to pay for each.
-We'll also list a number of popular choices. These lists are neither endorsements nor meant to be exhaustive.</p>
-<p>We are going to start with a single server, running Sqlite3. In <a href="../Scaling/">Scaling</a> we'll outline the steps you need to take to scale to multiple machines, running PostgreSQL or another database.</p>
-<p>While in theory you can assemble ingredients in any order, things might go faster if you do them in the order shown.</p>
-<hr />
-<h2 id="ssh-key">SSH Key</h2>
-<p>SSH keys are used to authenticate you to a server. You can think of them as a password that you don't have to remember.</p>
-<p>You probably already have one, but if not, create one. GitHub has some good docs on the subject:
-<a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generating a new SSH key and adding it to the ssh-agent</a>
-There are a number of different types of keys you can generate. Unless you have a reason to go with a different type, adopt GitHub's recommendation and request a <code>ed25519</code> key:</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+<h1 id="fly-explorer">Fly Explorer</h1>
+<h2 id="tldr">TL;DR:</h2>
+<div class="highlight"><pre><span></span><code>npx @rubys/fly-explorer
 </code></pre></div>
-<p>SSH Keys are free.</p>
-<hr />
-<h2 id="server">Server</h2>
-<p>A server is a computer that you can access over the internet. You can think of it as a computer that you rent by the month (and in some cases, by the hour).
-You can also time share a machine with others by requesting a Virtual Private Server (VPS).</p>
-<p>Most Kamal demos start with <a href="https://www.hetzner.com/">Hetzner</a>.
-<a href="https://www.digitalocean.com/resources/articles/hetzner-alternatives">Digital Ocean posts a list of alternatives.</a></p>
-<p class="annotate">For demo/hobby purposes head to Hetzner Cloud. You can get a VPS starting at €3.79/month. Such a machine could handle up to around 20 requests per second. (1)
-Note that while a small VPS is sufficient for running a small application, this book describes how you can run multiple applications, a staging environment, and even a build server on a single host.
-For that, you will need more RAM, and possibly more persistent storage than you will get with the smallest available VPS.</p>
-<ol>
-<li>Source: <a href="https://fractaledmind.github.io/2023/12/23/rubyconftw/">How (and why) to run SQLite in production: RubyConf Taiwan 2023</a></li>
-</ol>
-<p class="annotate">For production purposes head to Hetzner Robot and consider a dedicated machine. For €39.00/month you get 14 cores, 64GB RAM, 1TB NVMe, and unlimited bandwidth across a 1GB/s port. There is a setup fee of €39.00 required.
-Such a machine should be able to process hundreds, and possibly even a small number of thousands, of requests per second. (1)</p>
-<ol>
-<li>Source: <a href="https://fractaledmind.github.io/2023/12/05/sqlite-myths-linear-writes-do-not-scale/">SQLite Myths: Linear writes don't scale </a></li>
-</ol>
-<p>Sign up, provide your public ssh key, select the latest LTS version of Ubuntu (24.04). As a first time customer, this process will take about fifteen minutes, and you will end up with an IPv4 address. Once you are an established customer, this will go quicker.</p>
-<p>Before proceeding, set up a firewall to only allow ports 22, 80, and 443 access.  For robot, click on the Firewall tab, select the WebServer template, and click Apply and Save.</p>
-<p>See screenshots: <a href="Hetzner/Cloud/">Hetzner Cloud</a>, <a href="Hetzner/Robot/">Hetzner Robot</a></p>
-<hr />
-<h2 id="object-storage">Object Storage</h2>
-<p>To deploy the example described in <a href="../Local/">Local</a>, you will also want Object Storage, which starts at €5/month for a TB, plus €1/month for each TB of bandwidth. While you can add this later, it is needed to store your product images.
-Note: while there are free quotas, be aware that you are charged for every hour you have at least one Bucket, even if it's empty.</p>
-<p>It is also possible to run your own Object Storage services using <a href="https://min.io/">Minio</a>. If you go that route it is best if that were run on a separate server for disaster recovery reasons.</p>
-<hr />
-<h2 id="domain-name">Domain Name</h2>
-<p>A domain name is a human readable name that points to an IP address. This is what your users will put in the URL bar of their browser.</p>
-<p><a href="https://www.cloudflare.com/products/registrar/">CloudFlare</a> is a domain registrar that prices domains at or close to cost and has other benefits.
-<a href="https://www.shopify.com/blog/best-domain-registrars#">Shopify posts a list of alternatives.</a></p>
-<p>After any initial teaser rates, plan to spend $10 to $25 a year for a domain name (vanity names can be considerably more).</p>
-<p>Once you have obtained your domain name, go into the DNS settings, create an <strong>A</strong> record, with your IP address as the content.
-If you are using CloudFlare, disable the "orange cloud" by clicking on the "Proxied" setting for now - if needed you can add that back later.</p>
-<hr />
-<h2 id="container-registry">Container Registry</h2>
-<p>Kamal works by building a Docker image and pushing it to a registry, and then pulling that image onto your deployment machines.</p>
-<p><a href="https://hub.docker.com/">DockerHub</a> is effectively the default container registry, and can range from free to $24/user/month.
-<a href="https://quay.io/">quay.io</a>,
-<a href="https://cloud.google.com/artifact-registry/docs">gcr.io</a>,
-<a href="https://gallery.ecr.aws/">public.ecr.aws</a>,
-<a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry">ghcr.io</a>, and
-<a href="https://docs.gitlab.com/ee/user/packages/container_registry/">Gitlab</a>
-are alternatives. You can also use <a href="https://distribution.github.io/distribution/">CNCF's Distribution Registry</a> to self host a registry.</p>
-<p>Realistically, you can get a container registry for a small number of personal projects for free.</p>
-<p>When done you will end up with a rather opaque registry password that you will need later.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p class="annotate">Be aware of your container registry's visibility settings. Docker Hub repositories default to public, and Docker's free plan allows only a single private repository(1). A public repository is typically fine if your application's code is already public and you've followed the instructions in <a href="../Secrets/">Secrets</a>.</p>
-<ol>
-<li>Container registries identify images using the format <code>username/repository:tag</code>. Kamal uses one repository per application and tags each built image with it's git revision SHA, as in <code>samruby/depot:b4a133e45d9dc7becf90f98bd045a6956e886a19</code></li>
-</ol>
-</div>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<p><a href="https://knot.deployto.dev/">Knot</a> provides:</p>
-<blockquote>
-<p>Private registry plus remote building for Kamal 2. Zero external dependencies - no Docker Hub account required.</p>
-</blockquote>
-<p>I haven't looked at it yet, but is sounds promising. Should satisfy the requirements for both this step and the Builder below.</p>
-</div>
-<hr />
-<h2 id="password-manager-optional-but-highly-recommended">Password Manager (optional but highly recommended)</h2>
-<p>A password manager is a tool that stores your passwords in an encrypted form. If you are working as a team, a password manager can be used to share secrets.</p>
-<p>Password managers supported by Kamal are <a href="https://1password.com/">1Password</a>,
-<a href="https://www.lastpass.com/">LastPass</a>,
-<a href="https://bitwarden.com/">Bitwarden</a>,
-<a href="https://aws.amazon.com/secrets-manager/">AWS Secrets Manager</a>,
-and <a href="https://www.doppler.com/">Doppler</a>.
-Figure $2 to $10 per user per month, unless you decide to self host, which is an option with <a href="https://bitwarden.com/help/self-host-an-organization/">Bitwarden</a>.</p>
-<p>Not recommended, but you can directly put your passwords into <code>.kamal/secrets</code>, just be sure to add this file to your <code>.gitignore</code> and <code>.dockerignore</code> files.</p>
-<hr />
-<h2 id="builder-optional-but-recommended">Builder (optional but recommended)</h2>
-<p>Kamal can use Docker to build your images locally, but there are at least two good reasons why you wouldn't want to do so:</p>
+<p>Links: <a href="https://github.com/rubys/fly-explorer">GitHub</a>, <a href="https://www.npmjs.com/package/@rubys/fly-explorer">NPM</a>; for best results upgrade to flyctl <a href="https://github.com/superfly/flyctl/releases/tag/v0.3.142">v0.3.142</a>.</p>
+<p>Go explore! Check the platform status. Invoke MCP tools directly. Create an app, a machine, and an IP address. Set a secret. Delete something.</p>
+<h2 id="what-you-are-looking-at">What you are looking at</h2>
 <ul>
-<li>If you are developing on ARM64 (like Apple Silicon), but you want to deploy on AMD64 (x86 64-bit), the build can be <a href="https://kamal-deploy.org/docs/configuration/builder-examples/#using-remote-builder-for-single-arch">quite slow</a>) and <a href="https://github.com/docker/for-mac/issues/5342#issuecomment-779133157">buggy</a>.</li>
-<li>If you have an asymmetric network connection (where downloads are faster than uploads), you may benefit from a configuration where you only upload your changed source to another server, and that server is responsible for uploading the considerably larger resulting Docker image.</li>
+<li>This entire codebase was generated by <a href="https://www.anthropic.com/claude-code">Claude Code</a>. 100%. I didn't write a single line of code. I didn't push it to GitHub or NPM—Claude did everything. I told it what I wanted. I told it when something didn't work. Check the commit logs; you will see Claude struggled to get <code>npx</code> working. I've been there—I know that pain. But back to the main point: everything you see here was created in perhaps half a day.</li>
+<li>This is a Web UI built on top of an MCP client, on top of flyctl, on top of a combination of the Machine API and GraphQL. I've got an <a href="https://fly.io/blog/mcps-everywhere/">upcoming blog post</a> where I describe MCPs as API 2.0, and I had an urge to <a href="https://www.goodreads.com/quotes/7071133-law-9-win-through-your-actions-never-through-argument-judgment">demonstrate, not explicate</a>, so I created this program.</li>
+<li>Along the way, I found and <a href="https://github.com/superfly/flyctl/pull/4431/files">fixed</a> a few bugs in the flyctl MCP server—not surprising, as that code was written quickly with the assistance of AI. I also <a href="https://github.com/superfly/flyctl/pull/4432/files">added MCP tools for IP commands</a>, and when I say "I", I really mean Claude Code here. All code changes, with the exception of <code>internal/command/ips/private.go</code>, were written by Claude Code. In its first draft, it did two things I didn't like, but instead of fixing them myself, I told Claude what I wanted and it made the change. As for the change I wrote myself: prior to today, <code>fly ips private --json</code> didn't produce JSON. Now it does.</li>
 </ul>
-<p>A builder is simply a host that you have SSH access to and that is running Docker—preferably using the target instruction set architecture. You already have exactly that. Installing Docker on the host that you will be running your application is something Kamal does for you anyway. And that host can run multiple containers, and will obviously be running using the same instruction set architecture as your application. You just need to make sure that the host has enough storage and memory capacity to run both builds and your application. A ballpark of 8GB of RAM and 20GB of free storage space would be sufficient.</p>
-<p>If you decide to go this route, it may be worthwhile to set up a cron job to run the following command periodically:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-f
-</code></pre></div>
-<hr />
-<p>There will be more choices in <a href="../Secure/">Going to Production</a>, but this is enough for now.
-Now that you've finished your preparations, the next part moves quickly.</p>
+<h2 id="opinions">Opinions</h2>
+<p>Stop here if you like. But I certainly have opinions.</p>
+<p>This program, while incomplete, can already do things that the Machine API can't (for example: allocate an IP address), and things that our ui-ex dashboard can't do (like delete a volume). There's a reason that @kristin_m said <a href="https://fly.io/docs/reference/aws-to-fly-guide/#deployments-and-secrets">Most users glue things together with Bash scripts and <code>flyctl</code></a>. Note that most of our LLM sandbox customers are creating an app per user, which means allocating IP addresses.</p>
+<p>What does this mean?</p>
+<ul>
+<li>MCPs can replace our Machines API as the preferred way our users make use of our product. My analogy to HTTP 1.1 applies here. Both our Machines API and MCPs are JSON in—JSON out. The key difference is that with MCPs you can establish a single connection, make a number of requests, and get back not only replies but server-pushed notifications.</li>
+<li>MCPs can replace the CLI as our users' preferred way to use our product. Install <code>fly mcp server</code> and let Claude or Cursor or VSCode take it from there. Writing a script? LLMs know how to make direct use of the plentiful MCP client SDKs out there—let the LLM help you out. After all, that's what I did.</li>
+<li>MCPs can be used to replace our existing dashboard and make it easy for our larger customers to build their own custom dashboards. No, I'm not suggesting replacing Phoenix with Node.js and Express. I didn't write any of the code in Fly Explorer and have zero attachment to that code. But if I can do that in an afternoon, imagine what someone with design skills and a focus on DX could do in a month. And it could be built in such a way that we can evangelize the approach with our larger LLM sandbox customers. After all, those same customers are likely already predisposed to adopt MCPs.</li>
+</ul>
+<p>Note: I'm not suggesting that we deprecate pretty much anything—certainly not the Machine API. In fact, I would love to see the Machine API get a lot of attention and get everything flowing through it, including usage, monitoring, and billing. flyctl and MCP could then build upon that. And if that should feel tedious—guess what, that's where LLMs excel. Tell Claude Code (or your favorite LLM tool) that you have an API shaped like this and you want to build a CLI interface and an MCP tool which exposes that function, and watch it work. That's pretty much what I did for adding IP tools to fly mcp server.</p>
+<h2 id="out-there">Out there</h2>
+<p>If you are still with me so far, here is where I may lose you.</p>
+<p>If we are heading towards replacing usage of the CLI with MCPs, we are going to need to tackle <code>fly launch</code>. That was on my list of things to do, but I've held off as I noticed that @igor is basically tackling the same problem, so I chose to focus elsewhere for now and plan to double back once his work is complete.</p>
+<p>We should be able to take his prompt, strip out any phoenix.new-specific aspects, and create an epic description for the fly launch tool (or family of tools). This would make this functionality available to everybody who uses a tool that supports MCPs.</p>
+<p>Then we can take a look at @chrismccord's prompt. I'm not suggesting this, but merely making an observation. There are a lot of meta MCPs out there, like <a href="https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking">sequential thinking</a>, that describe how best to approach a problem. Chris's prompt could also be packaged as an MCP. Perhaps that would deprive us of some phoenix.new business where, if I'm not mistaken, we are hoping to <em>perhaps</em> break even?</p>
+<p>Maybe instead of focusing on being a platform for developers, we focus on being a platform for tools that want to create a machine per user—and focus on providing <em>them</em> the tools they need to support developers?</p>
 
 
 
