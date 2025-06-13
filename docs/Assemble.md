@@ -115,6 +115,13 @@ When done you will end up with a rather opaque registry password that you will n
 
     1. Container registries identify images using the format `username/repository:tag`. Kamal uses one repository per application and tags each built image with it's git revision SHA, as in `samruby/depot:b4a133e45d9dc7becf90f98bd045a6956e886a19`
 
+!!! todo
+
+    [Knot](https://knot.deployto.dev/) provides:
+    > Private registry plus remote building for Kamal 2. Zero external dependencies - no Docker Hub account required.
+
+    I haven't looked at it yet, but is sounds promising. Should satisfy the requirements for both this step and the Builder below.
+
 ---
 
 ## Password Manager (optional but highly recommended)
