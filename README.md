@@ -1,6 +1,9 @@
 # Using Kamal 2.0 in Production
 
-See [book](https://rubys.github.io/kamal-in-production/) live on GitHub Pages.
+See:
+* [blog post](https://fly.io/blog/kamal-in-production/)
+* [book](https://rubys.github.io/kamal-in-production/)
+* [presentation](https://rubys.github.io/kamal-in-production/kamal-presentation.html)
 
 # Development
 
