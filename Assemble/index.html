@@ -1247,9 +1247,15 @@ Figure $2 to $10 per user per month, unless you decide to self host, which is an
 <li>If you have an asymmetric network connection (where downloads are faster than uploads), you may benefit from a configuration where you only upload your changed source to another server, and that server is responsible for uploading the considerably larger resulting Docker image.</li>
 </ul>
 <p>A builder is simply a host that you have SSH access to and that is running Docker—preferably using the target instruction set architecture. You already have exactly that. Installing Docker on the host that you will be running your application is something Kamal does for you anyway. And that host can run multiple containers, and will obviously be running using the same instruction set architecture as your application. You just need to make sure that the host has enough storage and memory capacity to run both builds and your application. A ballpark of 8GB of RAM and 20GB of free storage space would be sufficient.</p>
-<p>If you decide to go this route, it may be worthwhile to set up a cron job to run the following command periodically:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-f
+<p>If you decide to go this route, it is essential to set up regular cleanup to prevent disk space issues. Add the following to your root's crontab:</p>
+<div class="highlight"><pre><span></span><code><span class="m">0</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/bin/docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a<span class="w"> </span>--volumes<span class="w"> </span>-f<span class="w"> </span>&gt;&gt;<span class="w"> </span>/var/log/docker-prune.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
 </code></pre></div>
+<p>This runs daily at 3 AM and:
+- Removes all unused containers, networks, images (not just dangling ones)
+- Removes all unused volumes
+- Logs the output for monitoring
+- Prevents your builder from running out of disk space</p>
+<p>Without this, Docker can accumulate gigabytes of unused data over time.</p>
 <hr />
 <p>There will be more choices in <a href="../Secure/">Going to Production</a>, but this is enough for now.
 Now that you've finished your preparations, the next part moves quickly.</p>
