@@ -148,11 +148,19 @@ Kamal can use Docker to build your images locally, but there are at least two go
 
 A builder is simply a host that you have SSH access to and that is running Docker—preferably using the target instruction set architecture. You already have exactly that. Installing Docker on the host that you will be running your application is something Kamal does for you anyway. And that host can run multiple containers, and will obviously be running using the same instruction set architecture as your application. You just need to make sure that the host has enough storage and memory capacity to run both builds and your application. A ballpark of 8GB of RAM and 20GB of free storage space would be sufficient.
 
-If you decide to go this route, it may be worthwhile to set up a cron job to run the following command periodically:
+If you decide to go this route, it is essential to set up regular cleanup to prevent disk space issues. Add the following to your root's crontab:
 
 ```sh
-docker system prune -f
+0 3 * * * /usr/bin/docker system prune -a --volumes -f >> /var/log/docker-prune.log 2>&1
 ```
+
+This runs daily at 3 AM and:
+- Removes all unused containers, networks, images (not just dangling ones)
+- Removes all unused volumes
+- Logs the output for monitoring
+- Prevents your builder from running out of disk space
+
+Without this, Docker can accumulate gigabytes of unused data over time.
 
 ---
 
